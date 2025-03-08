@@ -37,5 +37,5 @@ curl http://localhost:3000/api/v1/earthquakes
 Deployment
 The application is hosted on render.com, and you can access it at: 
 
-Developed by: Essoh Nsikan Okon
+Developed by: Sellicon Velliy
 
