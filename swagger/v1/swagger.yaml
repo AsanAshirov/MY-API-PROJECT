@@ -1,0 +1,49 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/earthquakes":
+    post:
+      summary: Creates an Earthquake
+      tags:
+      - Earthquakes
+      parameters: []
+      responses:
+        '201':
+          description: earthquake created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                date:
+                  type: string
+                  format: date
+                time:
+                  type: string
+                  format: time
+                latitude:
+                  type: number
+                longitude:
+                  type: number
+                location:
+                  type: string
+                depth:
+                  type: number
+              required:
+              - date
+              - time
+              - latitude
+              - longitude
+              - location
+              - depth
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
